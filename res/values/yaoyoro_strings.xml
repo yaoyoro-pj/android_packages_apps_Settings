@@ -49,4 +49,8 @@
     <string name="version">Version</string>
     <string name="edit">Edit</string>
     <string name="device_name">Device name</string>
+
+    <!-- Maintainer name -->
+    <string name="maintainer_name">Maintainer</string>
+    <string name="yaoyoro_maintainer_uri" translatable="false">http://127.0.0.1</string>
 </resources>
