@@ -4,6 +4,10 @@
     <string name="hardware_sku">Hardware SKU</string>
     <string name="hardware_hwname">HW name</string>
 
+    <!-- General -->
+    <string name="copied_to_clipboard">Copied to clipboard</string>
+    <string name="longpress_to_clipboard">Long-press to copy</string>
+
     <!-- QS panel -->
     <string name="qs_panel_options_title">Quick settings</string>
     <string name="qs_panel_options_summary">Customize quick settings tiles</string>
