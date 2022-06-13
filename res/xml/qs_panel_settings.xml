@@ -104,6 +104,14 @@
             settings:textStart="@string/qs_columns_landscape_min"
             settings:textEnd="@string/qs_columns_landscape_max" />
 
+        <com.android.settings.support.SecureSettingSeekBarPreference
+            android:key="qs_transparency"
+            android:title="@string/qs_transparency_title"
+            android:summary="@string/qs_transparency_summary"
+            android:defaultValue="100"
+            android:max="100"
+            android:min="1" />
+
         <com.android.settings.support.SecureSettingSwitchPreference
             android:key="qs_force_large_header"
             android:title="@string/qs_force_large_header_title"
