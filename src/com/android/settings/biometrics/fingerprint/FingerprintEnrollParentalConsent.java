@@ -102,12 +102,6 @@ public class FingerprintEnrollParentalConsent extends FingerprintEnrollIntroduct
     }
 
     @StringRes
-    @Override
-    protected int getFooterMessage3() {
-        return R.string.security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_3;
-    }
-
-    @StringRes
     protected int getFooterMessage4() {
         return R.string.security_settings_fingerprint_v2_enroll_introduction_footer_message_consent_4;
     }

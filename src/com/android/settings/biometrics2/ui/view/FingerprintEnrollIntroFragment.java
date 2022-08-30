@@ -85,27 +85,22 @@ public class FingerprintEnrollIntroFragment extends Fragment {
         mView = inflater.inflate(R.layout.fingerprint_enroll_introduction, container, false);
 
         final ImageView iconFingerprint = mView.findViewById(R.id.icon_fingerprint);
-        final ImageView iconDeviceLocked = mView.findViewById(R.id.icon_device_locked);
         final ImageView iconTrashCan = mView.findViewById(R.id.icon_trash_can);
         final ImageView iconInfo = mView.findViewById(R.id.icon_info);
         mIconShield = mView.findViewById(R.id.icon_shield);
         final ImageView iconLink = mView.findViewById(R.id.icon_link);
         iconFingerprint.getDrawable().setColorFilter(getIconColorFilter(context));
-        iconDeviceLocked.getDrawable().setColorFilter(getIconColorFilter(context));
         iconTrashCan.getDrawable().setColorFilter(getIconColorFilter(context));
         iconInfo.getDrawable().setColorFilter(getIconColorFilter(context));
         mIconShield.getDrawable().setColorFilter(getIconColorFilter(context));
         iconLink.getDrawable().setColorFilter(getIconColorFilter(context));
 
         final TextView footerMessage2 = mView.findViewById(R.id.footer_message_2);
-        final TextView footerMessage3 = mView.findViewById(R.id.footer_message_3);
         final TextView footerMessage4 = mView.findViewById(R.id.footer_message_4);
         final TextView footerMessage5 = mView.findViewById(R.id.footer_message_5);
         mFooterMessage6 = mView.findViewById(R.id.footer_message_6);
         footerMessage2.setText(
                 R.string.security_settings_fingerprint_v2_enroll_introduction_footer_message_2);
-        footerMessage3.setText(
-                R.string.security_settings_fingerprint_v2_enroll_introduction_footer_message_3);
         footerMessage4.setText(
                 R.string.security_settings_fingerprint_v2_enroll_introduction_footer_message_4);
         footerMessage5.setText(

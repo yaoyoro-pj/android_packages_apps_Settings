@@ -87,25 +87,21 @@ public class FingerprintEnrollIntroduction extends BiometricEnrollIntroduction {
         mDevicePolicyManager = getSystemService(DevicePolicyManager.class);
 
         final ImageView iconFingerprint = findViewById(R.id.icon_fingerprint);
-        final ImageView iconDeviceLocked = findViewById(R.id.icon_device_locked);
         final ImageView iconTrashCan = findViewById(R.id.icon_trash_can);
         final ImageView iconInfo = findViewById(R.id.icon_info);
         final ImageView iconShield = findViewById(R.id.icon_shield);
         final ImageView iconLink = findViewById(R.id.icon_link);
         iconFingerprint.getDrawable().setColorFilter(getIconColorFilter());
-        iconDeviceLocked.getDrawable().setColorFilter(getIconColorFilter());
         iconTrashCan.getDrawable().setColorFilter(getIconColorFilter());
         iconInfo.getDrawable().setColorFilter(getIconColorFilter());
         iconShield.getDrawable().setColorFilter(getIconColorFilter());
         iconLink.getDrawable().setColorFilter(getIconColorFilter());
 
         final TextView footerMessage2 = findViewById(R.id.footer_message_2);
-        final TextView footerMessage3 = findViewById(R.id.footer_message_3);
         final TextView footerMessage4 = findViewById(R.id.footer_message_4);
         final TextView footerMessage5 = findViewById(R.id.footer_message_5);
         final TextView footerMessage6 = findViewById(R.id.footer_message_6);
         footerMessage2.setText(getFooterMessage2());
-        footerMessage3.setText(getFooterMessage3());
         footerMessage4.setText(getFooterMessage4());
         footerMessage5.setText(getFooterMessage5());
         footerMessage6.setText(getFooterMessage6());
@@ -231,11 +227,6 @@ public class FingerprintEnrollIntroduction extends BiometricEnrollIntroduction {
     @StringRes
     protected int getFooterMessage2() {
         return R.string.security_settings_fingerprint_v2_enroll_introduction_footer_message_2;
-    }
-
-    @StringRes
-    protected int getFooterMessage3() {
-        return R.string.security_settings_fingerprint_v2_enroll_introduction_footer_message_3;
     }
 
     @StringRes
