@@ -523,7 +523,7 @@ public class TextToSpeechSettings extends SettingsPreferenceFragment
             return;
         }
         Locale currentLocale = null;
-        if (!mEnginesHelper.isLocaleSetToDefaultForEngine(mTts.getCurrentEngine())) {
+        if (mTts.getCurrentEngine() != null && !mEnginesHelper.isLocaleSetToDefaultForEngine(mTts.getCurrentEngine())) {
             currentLocale = mEnginesHelper.getLocalePrefForEngine(mTts.getCurrentEngine());
         }
 
