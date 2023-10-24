@@ -22,6 +22,10 @@ import android.provider.Settings;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 
+import android.os.Bundle;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -30,6 +34,7 @@ import com.android.settingslib.search.SearchIndexable;
 @SearchIndexable
 public class QSPanelSettings extends DashboardFragment {
 
+    private static final String KEY_QS_SHOW_AUTO_BRIGHTNESS = "qs_show_auto_brightness";
     private static final String TAG = "QSPanelSettings";
     private static final String[] qsCustPreferences = { "qs_tile_shape",
             "qqs_num_columns", "qqs_num_columns_landscape",
@@ -40,9 +45,18 @@ public class QSPanelSettings extends DashboardFragment {
         super.onCreate(savedInstanceState);
 
         PreferenceScreen preferenceScreen = getPreferenceScreen();
+        Preference qsShowAutoBrightnessPreference = preferenceScreen.findPreference(KEY_QS_SHOW_AUTO_BRIGHTNESS);
 
         boolean qsStyleRound = Settings.Secure.getIntForUser(getContext().getContentResolver(),
                 Settings.Secure.QS_STYLE_ROUND, 1, UserHandle.USER_CURRENT) == 1;
+
+        if (qsShowAutoBrightnessPreference != null) {
+            boolean automaticBrightnessAvailable = getContext().getResources().getBoolean(
+                    com.android.internal.R.bool.config_automatic_brightness_available);
+            if (!automaticBrightnessAvailable) {
+                qsShowAutoBrightnessPreference.setVisible(false);
+            }
+        }
 
         if (!qsStyleRound) {
             for (String key : qsCustPreferences) {
