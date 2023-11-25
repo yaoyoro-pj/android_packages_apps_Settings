@@ -120,6 +120,12 @@
             settings:controller="com.android.settings.notification.zen.ZenModePreferenceController"
         />
 
+        <Preference
+            android:key="island_notification"
+            android:title="@string/island_notification_title"
+            android:summary="@string/island_notification_summary"
+            android:fragment="com.android.settings.custom.fragment.notifications.IslandSettings" />
+
         <SwitchPreference
             android:key="lock_screen_show_only_unseen_notifs"
             android:order="18"
