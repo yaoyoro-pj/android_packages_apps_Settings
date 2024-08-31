@@ -65,4 +65,8 @@
     <string name="menu_hide_overlay">Hide overlay</string>
     <string name="hide_applist_title">Hide applist</string>
     <string name="hide_applist_summary">Prevent apps from checking selected apps from appslist</string>
+
+    <!-- Long press navbar to search -->
+    <string name="navbar_long_press_gesture_title">Long press to search</string>
+    <string name="navbar_long_press_gesture_summary">Long press the gesture bar to invoke Cirlce to Search</string>
 </resources>
