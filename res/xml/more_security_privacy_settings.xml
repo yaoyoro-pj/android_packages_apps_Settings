@@ -84,6 +84,13 @@
             android:summary="@string/summary_placeholder"
             settings:searchable="false"/>
 
+        <!-- Disable QS -->
+        <com.android.settings.support.SystemSettingSwitchPreference
+            android:key="secure_lockscreen_qs_disabled"
+            android:title="@string/disable_qs_title"
+            android:summary="@string/disable_qs_summary"
+            android:defaultValue="false" />
+
         <!-- Show media on lock screen -->
         <SwitchPreference
             android:key="privacy_media_controls_lockscreen"
