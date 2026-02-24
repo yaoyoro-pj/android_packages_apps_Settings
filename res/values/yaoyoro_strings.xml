@@ -2,5 +2,6 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string name="hardware_sku">Hardware SKU</string>
+    <string name="hardware_hwname">HW name</string>
 
 </resources>
