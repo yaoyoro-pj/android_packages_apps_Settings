@@ -33,4 +33,8 @@
     <string name="qqs_columns_landscape">QQS columns in landscape</string>
     <string name="qqs_columns_landscape_min" translatable="false">@string/qs_columns_landscape_min</string>
     <string name="qqs_columns_landscape_max" translatable="false">@string/qs_columns_landscape_max</string>
+
+    <!-- QS large screen shade header -->
+    <string name="qs_force_large_header_title">Force large shade header</string>
+    <string name="qs_force_large_header_summary">Might reduce QS lag if you experience that often.</string>
 </resources>

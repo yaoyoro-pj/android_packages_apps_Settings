@@ -72,5 +72,11 @@
             android:defaultValue="6"
             settings:textStart="@string/qs_columns_landscape_min"
             settings:textEnd="@string/qs_columns_landscape_max" />
+
+        <com.android.settings.support.SecureSettingSwitchPreference
+            android:key="qs_force_large_header"
+            android:title="@string/qs_force_large_header_title"
+            android:summary="@string/qs_force_large_header_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 </PreferenceScreen>
