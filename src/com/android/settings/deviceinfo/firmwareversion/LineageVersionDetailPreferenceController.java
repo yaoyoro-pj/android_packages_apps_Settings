@@ -24,7 +24,6 @@ import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.text.TextUtils;
-import android.util.Log;
 
 import androidx.annotation.VisibleForTesting;
 import androidx.preference.Preference;
@@ -37,15 +36,10 @@ import com.android.settingslib.RestrictedLockUtilsInternal;
 
 public class LineageVersionDetailPreferenceController extends BasePreferenceController {
 
-    private static final String TAG = "lineageVersionDialogCtrl";
     private static final int DELAY_TIMER_MILLIS = 500;
     private static final int ACTIVITY_TRIGGER_COUNT = 3;
 
-    private static final String KEY_LINEAGE_VERSION_PROP = "ro.lineage.display.version";
-
-    private static final String PLATLOGO_PACKAGE_NAME = "org.lineageos.lineageparts";
-    private static final String PLATLOGO_ACTIVITY_CLASS =
-            PLATLOGO_PACKAGE_NAME + ".logo.PlatLogoActivity";
+    private static final String KEY_YAOYORO_VERSION_PROP = "ro.yaoyoro.version";
 
     private final UserManager mUserManager;
     private final long[] mHits = new long[ACTIVITY_TRIGGER_COUNT];
@@ -76,7 +70,7 @@ public class LineageVersionDetailPreferenceController extends BasePreferenceCont
 
     @Override
     public CharSequence getSummary() {
-        return SystemProperties.get(KEY_LINEAGE_VERSION_PROP,
+        return SystemProperties.get(KEY_YAOYORO_VERSION_PROP,
                 mContext.getString(R.string.unknown));
     }
 
@@ -87,26 +81,6 @@ public class LineageVersionDetailPreferenceController extends BasePreferenceCont
         }
         if (Utils.isMonkeyRunning()) {
             return false;
-        }
-        arrayCopy();
-        mHits[mHits.length - 1] = SystemClock.uptimeMillis();
-        if (mHits[0] >= (SystemClock.uptimeMillis() - DELAY_TIMER_MILLIS)) {
-            if (mUserManager.hasUserRestriction(UserManager.DISALLOW_FUN)) {
-                if (mFunDisallowedAdmin != null && !mFunDisallowedBySystem) {
-                    RestrictedLockUtils.sendShowAdminSupportDetailsIntent(mContext,
-                            mFunDisallowedAdmin);
-                }
-                Log.d(TAG, "Sorry, no fun for you!");
-                return true;
-            }
-
-            final Intent intent = new Intent(Intent.ACTION_MAIN)
-                     .setClassName(PLATLOGO_PACKAGE_NAME, PLATLOGO_ACTIVITY_CLASS);
-            try {
-                mContext.startActivity(intent);
-            } catch (Exception e) {
-                Log.e(TAG, "Unable to start activity " + intent.toString());
-            }
         }
         return true;
     }
