@@ -12,14 +12,14 @@
 
     <FrameLayout
         android:id="@+id/logo"
-        android:layout_width="170dp"
+        android:layout_width="92dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/aboutUI"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerVertical="true"
         android:background="@drawable/ic_yaoyoro_shape"
-        android:minWidth="160dp">
+        android:minWidth="90dp">
 
         <ImageView
             android:layout_width="wrap_content"
