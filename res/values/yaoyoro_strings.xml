@@ -71,11 +71,11 @@
     <string name="navbar_long_press_gesture_summary">Long press the gesture bar to invoke Cirlce to Search</string>
 
     <!-- Island Notification -->
-    <string name="island_notification_title">Island notification</string>
-    <string name="island_notification_summary">Display heads-up notification in Dynamic Island style</string>
+    <string name="island_notification_title">Compact heads-up</string>
+    <string name="island_notification_summary">Display heads-up notifications in compact style.</string>
     <string name="island_notification_footer_text">
-        The Island notification feature, inspired by iOS\'s Dynamic Island, transforms Android\'s heads-up notifications into quick-access and compact notification utility.\n\nIsland Quick Access Controls includes the following features:\n1. Tap island notification to quick answer phone calls.\n2. Long press island notification to reject phone calls.\n3. Long press island notification to expand the island notification preview.
+        Long press normal notifications to expand the preview.\nFor calls, tap to quickly answer, long press to reject.
     </string>
     <string name="island_notification_now_playing_title">Now playing</string>
-    <string name="island_notification_now_playing_summary">Show currently playing media as island notification</string>
+    <string name="island_notification_now_playing_summary">Show currently playing media every track changes</string>
 </resources>
