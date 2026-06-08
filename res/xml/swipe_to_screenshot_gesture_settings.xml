@@ -31,6 +31,7 @@
         android:key="swipe_to_screenshot"
         android:title="@string/swipe_to_screenshot_gesture_title"
         android:summary="@string/swipe_to_screenshot_gesture_summary"
+        android:defaultValue="false"
         app:keywords="@string/keywords_gesture"
         app:controller="com.android.settings.gestures.SwipeToScreenshotPreferenceController" />
 
