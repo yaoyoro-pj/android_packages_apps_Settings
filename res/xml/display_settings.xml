@@ -155,6 +155,11 @@
             settings:requiresConfig="@bool/config_show_advanced_rotation_settings"
             settings:requiresFeature="android.hardware.sensor.accelerometer" />
 
+        <com.android.settings.support.SystemSettingSwitchPreference
+            android:key="enable_rotation_button"
+            android:title="@string/enable_floating_rotation_button_title"
+            android:defaultValue="true" />
+
         <Preference
             android:key="screen_resolution"
             android:title="@string/screen_resolution_title"
