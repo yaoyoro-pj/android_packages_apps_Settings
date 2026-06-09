@@ -123,4 +123,5 @@
 
     <!-- Floating rotation button -->
     <string name="enable_floating_rotation_button_title">Use floating rotate button</string>
+    <string name="enable_floating_rotation_button_summary">Show a floating button to rotate the screen when auto-rotate is off</string>
 </resources>

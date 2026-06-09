@@ -158,6 +158,7 @@
         <com.android.settings.support.SystemSettingSwitchPreference
             android:key="enable_rotation_button"
             android:title="@string/enable_floating_rotation_button_title"
+            android:summary="@string/enable_floating_rotation_button_summary"
             android:defaultValue="true" />
 
         <Preference
